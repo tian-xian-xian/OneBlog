@@ -33,4 +33,8 @@ public class PasswordUtil {
     public static String decrypt(String encryptPassword, String salt) throws Exception {
         return AesUtil.decrypt(Md5Util.MD5(salt + CommonConst.ZYD_SECURITY_KEY), encryptPassword);
     }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(encrypt("123456","root"));
+    }
 }
